@@ -16,7 +16,7 @@ export default defineGkdApp({
           key: 1,
           activityIds: '.MainActivity',
           matches:
-            '[desc="看3个广告领今日VIP"] + ImageView[visibleToUser=true][width=height]',
+            '[desc*="今日VIP"] + ImageView[visibleToUser=true][width=height]',
         },
       ],
     },
