@@ -6,7 +6,7 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '弹窗类]-动跳过更新',
+      name: '弹窗类-自动跳过更新',
       desc: '自动跳过更新弹窗',
       enable: false,
       actionMaximum: 1,
@@ -22,7 +22,7 @@ export default defineGkdApp({
     },
     {
       key: 5,
-      name: '自动关闭积分领取',
+      name: '弹窗类-自动关闭积分领取',
       desc: '自动关闭积分领取',
       rules: [
         {
