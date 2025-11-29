@@ -22,13 +22,13 @@ export default defineGkdApp({
     },
     {
       key: 5,
-      name: '弹窗类-自动关闭积分领取',
-      desc: '自动关闭积分领取',
+      name: '弹窗类-恭喜获得积分',
+      desc: '自动跳过恭喜获得积分弹窗',
       rules: [
         {
-          matches: ['[text="胖乖积分"]', '[vid="award"] + [vid="cancel"]'],
           fastQuery: true,
-          activityIds: ['com.qiekj.user.MainActivity'],
+          activityIds: '.MainActivity',
+          matches: '@[text="知道了"] - [text^="胖乖积分"]',
         },
       ],
     },
