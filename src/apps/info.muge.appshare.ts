@@ -6,8 +6,8 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: "功能类-自动跳过'奖励已领取'后的广告",
-      desc: "自动跳过'奖励已领取'后的广告页面",
+      name: '功能类-自动跳过奖励已领取后的广告',
+      desc: "自动跳过奖励已领取'后的广告页面",
       rules: [
         {
           matches: ['@[text="｜跳过"] - [text="奖励已领取"]'],
