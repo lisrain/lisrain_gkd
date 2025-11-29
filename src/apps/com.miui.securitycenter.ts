@@ -11,23 +11,24 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
-          matches: [
-            "[text=\"体检优化\"] < [vid=\"topPanel\"] + * + [vid=\"buttonPanel\"] > [text=\"退出\"]"
-          ]， 
-          fastQuery: true，
-          activityIds: [
-            "com.miui.securityscan.MainEntryActivity"
-          ]
-        }，
-        {
-          key: 2,
-          matches: [
-            "[text=\"体检优化\"] < [vid=\"topPanel\"] + * + [vid=\"buttonPanel\"] > [text=\"取消\"]"
-          ]，
-          fastQuery: true,
-          activityIds: [
-            "com.miui.securityscan.MainEntryActivity"
-          ]
+           matches: [
+             "[text=\"体检优化\"] < [vid=\"topPanel\"] + * + [vid=\"buttonPanel\"] > [text=\"退出\"]"
+           ]，
+           fastQuery: true，
+           activityIds: [
+             "com.miui.securityscan.MainEntryActivity"
+           ]
+         }，
+         {
+           key: 2，
+           matches: [
+             "[text=\"体检优化\"] < [vid=\"topPanel\"] + * + [vid=\"buttonPanel\"] > [text=\"取消\"]"
+           ]，
+           fastQuery: true,
+           activityIds: [
+             "com.miui.securityscan.MainEntryActivity"
+           ]
+         }
         }
       ]
     }
