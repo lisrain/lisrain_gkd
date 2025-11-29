@@ -11,7 +11,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     if: |
-      ${{ github.event.head_commit.message!='chore(actions): check_format_lint' }}
+      ${{ github.event.head_commit.message != 'chore(actions): check_format_lint' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -23,24 +23,35 @@ jobs:
 
       - run: pnpm install
 
+      # 1. 校验类型和 GKD 规则合法性（关键！）
       - run: pnpm run check
 
+      # 2. 自动修复代码风格（Prettier + ESLint --fix）
       - run: pnpm run format
-
       - run: pnpm run lint
 
-      - name: Git commit
+      # 3. 仅在有实际变更时才提交
+      - name: Commit fixes if any
         id: commit
         run: |
-          git config --local user.email github-actions[bot]@users.noreply.github.com
-          git config --local user.name github-actions[bot]
-          git status --porcelain
-          git --no-pager diff
-          git commit -a -m "chore(actions): check_format_lint"
-        continue-on-error: true
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          # 检查工作区是否有未暂存的变更
+          if ! git diff --quiet; then
+            echo "Detected formatting/linting changes. Committing..."
+            git add .
+            git commit -m "chore(actions): check_format_lint"
+            echo "committed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No changes detected. Skipping commit."
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+          fi
+        shell: bash
 
-      - name: Git push
+      # 4. 仅在有提交时才推送
+      - name: Push fixes
         uses: ad-m/github-push-action@master
-        if: ${{ steps.commit.outcome == 'success' }}
+        if: ${{ steps.commit.outputs.committed == 'true' }}
         with:
           branch: ${{ github.ref }}
