@@ -2,7 +2,7 @@
 
 ## 简介
 
-`lisrain_gkd` 是一个基于 [GKD](https://github.com/gkd-kit/gkd) 的自定义规则仓库，主要用于自动化跳过手机应用中的广告、开屏页或其他干扰性界面。该项目由用户 **lisrain** 维护，提供针对特定 App 的点击规则，提升用户体验。
+`GKD_subscription` 是一个基于 [GKD](https://github.com/gkd-kit/gkd) 的自定义规则仓库，主要用于自动化跳过手机应用中的广告、开屏页或其他干扰性界面。该项目由用户 **lisrain** 维护，提供针对特定 App 的点击规则，提升用户体验。
 
 ## 特性
 
@@ -21,13 +21,13 @@
 1. 安装 [GKD 应用](https://github.com/gkd-kit/gkd/releases)（需 Android 设备并开启无障碍权限）。
 2. 在 GKD 订阅-右下角+号 中添加订阅地址：
 
-   [https://raw.githubusercontent.com/lisrain/lisrain_gkd/main/dist/gkd.json5](https://raw.githubusercontent.com/lisrain/lisrain_gkd/main/dist/gkd.json5)
+   [https://raw.githubusercontent.com/lisrain/GKD_subscription/main/dist/gkd.json5](https://raw.githubusercontent.com/lisrain/GKD_subscription/main/dist/gkd.json5)
 
    如位于大陆地区，可使用如下镜像站链接导入（二选一）：
 
-   [https://gh-proxy.org/https://raw.githubusercontent.com/lisrain/lisrain_gkd/main/dist/gkd.json5](https://gh-proxy.org/https://raw.githubusercontent.com/lisrain/lisrain_gkd/main/dist/gkd.json5)
+   [https://gh-proxy.org/https://raw.githubusercontent.com/lisrain/GKD_subscription/main/dist/gkd.json5](https://gh-proxy.org/https://raw.githubusercontent.com/lisrain/GKD_subscription/main/dist/gkd.json5)
 
-   [https://fastly.jsdelivr.net/gh/lisrain/lisrain_gkd@main/dist/gkd.json5](https://fastly.jsdelivr.net/gh/lisrain/lisrain_gkd@main/dist/gkd.json5)
+   [https://fastly.jsdelivr.net/gh/lisrain/GKD_subscription@main/dist/gkd.json5](https://fastly.jsdelivr.net/gh/lisrain/GKD_subscription@main/dist/gkd.json5)
 
 3. 启用对应 App 的规则，即可自动执行点击操作。
 
