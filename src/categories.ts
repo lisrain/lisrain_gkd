@@ -13,20 +13,26 @@ export default defineGkdCategories([
   },
   {
     // 部分非广告但属于可以自动点击的弹窗或按钮
-    key: 6,
+    key: 2,
     name: '功能类',
     enable: true,
   },
   {
-    // 预留接口，把gkd当自动化用
-    key: 7,
+    // 预留接口，把gkd当自动化用，默认不启用
+    key: 3,
     name: '任务类',
     enable: false,
   },
   {
-    // 部分无操作影响但看着不舒服的内容
-    key: 8,
+    // 部分无操作影响但看着不舒服的广告类，默认不启用
+    key: 4,
     name: '占位类',
+    enable: false,
+  },
+  {
+    // 部分还在测试中的规则，默认不启用
+    key: 5,
+    name: '测试类',
     enable: false,
   },
 ]);
