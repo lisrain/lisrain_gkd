@@ -1,0 +1,19 @@
+import { defineGkdApp } from '@gkd-kit/define';
+
+export default defineGkdApp({
+  id: 'com.baidu.netdisk',
+  name: '百度网盘',
+  groups: [
+    {
+      key: 1,
+      name: '局部类-我的页面专属福利',
+      desc: '关闭我的页面专属福利部分（每日一次）',
+      rules: [
+        {
+          activityIds: 'com.baidu.netdisk.ui.MainActivity',
+          matches: '@TextView[visibleToUser=true] <<n [text="福利专区"]',
+        },
+      ],
+    },
+  ],
+});

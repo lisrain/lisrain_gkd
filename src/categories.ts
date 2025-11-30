@@ -26,7 +26,7 @@ export default defineGkdCategories([
   {
     // 部分无操作影响但看着不舒服的广告类，默认不启用
     key: 4,
-    name: '占位类',
+    name: '局部类',
     enable: false,
   },
   {

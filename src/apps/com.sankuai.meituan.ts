@@ -9,22 +9,21 @@ export default defineGkdApp({
       name: '功能类-拼好饭自动打开号码保护',
       desc: '拼好饭订单页自动打开号码保护',
       matchRoot: true,
+      actionDelay: 1000,
       rules: [
         {
           key: 0,
-          action: 'click',
+          action: 'clickCenter',
           matches: [
-            '@Image[visibleToUser=true] < View < View < View - [text="放心吃"||text="可享权益"]',
+            '@View[visibleToUser=true] - [text="放心吃"||text="可享权益"]',
           ],
-          excludeMatches: [
-            '@[text="号码保护"][visibleToUser=true] - Image - View[text="可享权益"]',
-          ],
+          excludeMatches: ['@[text="号码保护"] -n [text="可享权益"]'],
           activityIds: ['com.meituan.msc.modules.container.MSCActivity'],
         },
         {
           key: 1,
           preKeys: [0],
-          action: 'click',
+          action: 'clickCenter',
           matches: ['@Image[visibleToUser=true] - View - [text="号码保护"]'],
           matchRoot: true,
           activityIds: ['com.meituan.msc.modules.container.MSCActivity'],

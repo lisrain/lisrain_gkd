@@ -19,7 +19,7 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '占位类-自动关闭搜索页底部广告栏',
+      name: '局部类-自动关闭搜索页底部广告栏',
       desc: '自动关闭搜索页底部广告栏（有误触待修）',
       actionDelay: 2000,
       enable: false,
