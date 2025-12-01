@@ -11,7 +11,6 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          action: 'click',
           matches: ['[vid="tv_confirm_cancel"][visibleToUser=true]'],
           fastQuery: true,
           activityIds: ['.homepager.HomePagerActivity'],

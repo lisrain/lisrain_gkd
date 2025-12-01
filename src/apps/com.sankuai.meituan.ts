@@ -8,8 +8,7 @@ export default defineGkdApp({
       key: 1,
       name: '功能类-拼好饭自动打开号码保护',
       desc: '拼好饭订单页自动打开号码保护',
-      matchRoot: true,
-      actionDelay: 1000,
+      enable: false,
       rules: [
         {
           key: 0,
