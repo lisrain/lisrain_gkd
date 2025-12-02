@@ -112,7 +112,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 20,
+      key: 3,
       name: '功能类-自动选中支付宝支付&抵扣',
       desc: '自动选中支付宝支付&积分抵扣',
       actionDelay: 250,
@@ -129,6 +129,18 @@ export default defineGkdApp({
           matches: ['[text="自动抵扣"] + [vid="switchView"][checked=false]'],
           fastQuery: true,
           activityIds: ['com.qiekj.user.ui.activity.scan.AfterPayUseAct'],
+        },
+      ],
+    },
+    {
+      key: 6,
+      name: '弹窗类-使用前付款页弹窗广告',
+      desc: '自动关闭使用设备前付款页弹窗广告',
+      rules: [
+        {
+          activityIds: '.ui.activity.scan.AfterPayUseAct',
+          matches:
+            '@[id$="wm_pop_pic_close"][visibleToUser=true] - [id$="wm_pop_pic_container"]',
         },
       ],
     },
