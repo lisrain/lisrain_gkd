@@ -147,13 +147,7 @@ export default defineGkdApp({
           activityIds:
             'cn.vlion.ad.inland.ad.interstitial.VlionCustomInterstitialActivity',
           matches:
-            '@[vid="vilon_close"][visibleToUser=true] <<n [vid="vlion_ad_closed"] <<n [vid="vlion_ad_endcard_fl"]',
-        },
-        {
-          fastQuery: true,
-          activityIds:
-            'cn.vlion.ad.inland.ad.interstitial.VlionCustomInterstitialActivity',
-          matches: '@[vid="vilon_close"] <<n [vid="vlion_ad_closed"]',
+            '@[vid="vilon_close"||vid="vilon_close_miss"][visibleToUser=true] <<n [vid="vlion_ad_closed"]',
         },
       ],
     },
